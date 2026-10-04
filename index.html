@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EC-Scout 3D Model</title>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<style>
+html,body{margin:0;height:100%;font-family:system-ui,sans-serif;background:#0d1620;color:#e6eef7}
+model-viewer{width:100%;height:100%;--poster-color:transparent;background:radial-gradient(ellipse at 50% 30%,#22344a,#0a1118)}
+header{position:fixed;left:14px;top:12px;pointer-events:none}
+header b{font-size:18px}header span{display:block;font-size:12px;opacity:.7;margin-top:2px}
+nav{position:fixed;left:0;right:0;bottom:14px;display:flex;gap:8px;justify-content:center}
+nav a{color:#e6eef7;border:1.5px solid #6fb1ff;background:rgba(20,32,46,.88);padding:8px 14px;border-radius:999px;font-size:13px;text-decoration:none}
+.hs{background:#6fb1ff;color:#07121d;border:0;border-radius:6px;padding:3px 8px;font-size:11.5px;white-space:nowrap}
+</style>
+</head>
+<body>
+<model-viewer src="ec-scout.glb" alt="EC-Scout emerging contaminant screening device" camera-controls auto-rotate
+  shadow-intensity="1" environment-image="neutral" exposure="1.1" ar ar-modes="webxr scene-viewer quick-look"
+  camera-orbit="30deg 65deg auto" interaction-prompt="auto">
+  <button class="hs" slot="hotspot-screen" data-position="-0.0575 0.094 -0.005" data-normal="0 0 1">7" touchscreen</button>
+  <button class="hs" slot="hotspot-scope" data-position="-0.051 0.064 0" data-normal="0 1 0">USB microscope</button>
+  <button class="hs" slot="hotspot-cuv" data-position="0.071 0.059 0.005" data-normal="0 1 0">PFAS cuvette holder</button>
+  <button class="hs" slot="hotspot-ant" data-position="0.125 0.12 -0.0475" data-normal="0 1 0">GPS / Wi-Fi antenna</button>
+  <button class="hs" slot="hotspot-pwr" data-position="0.109 0.116 -0.0075" data-normal="0 0 1">Power</button>
+</model-viewer>
+<header><b>EC-Scout</b><span>Drag to rotate, scroll or pinch to zoom</span></header>
+<nav><a href="interactive.html">Open interactive version (tests, door, electronics)</a></nav>
+</body>
+</html>
